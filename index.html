@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mulan Landing Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat&family=Creepster&family=Quintessential&family=Rye&family=UnifrakturMaguntia&family=Kranky&family=Nosifer&family=Noto+Sans+Rubic&family=Noto+Color+Emoji&family=Dancing+Script&family=Fuggles&family=Indie+Flower&family=Kalam&family=Montserrat:wght@100&family=Permanent+Marker&family=Poppins&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9f71dab2a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                <img src="images/logomulan.png">
+            </a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        </header>
+        <div class="banner">
+            <img src="images/bgmulan.jpg" class="bg">
+            <div class="content">
+                <img src="images/namemulan.png" class="movieTitle">
+                <h4>
+                    <span>2020</span>
+                    <span><i>12+</i></span>
+                    <span>1h 55min</span>
+                    <span>Action</span>
+                </h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut nisi obcaecati asperiores, perspiciatis doloremque debitis in animi placeat id accusamus, tempore, ducimus a. Dolorum quis dolorem cumque eum fugiat exercitationem!</p>
+                <div class="buttons">
+                    <a href="#">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        Play
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        My List
+                    </a>
+                </div>
+            </div>
+            <a class="play" onclick="toggleVideo();">
+                <img src="images/playmulan.png">
+                Watch Trailer
+            </a>
+        </div>
+        <div class="trailer">
+            <video src="trailer.mp4" controls="true"></video>
+            <img src="images/closemulan.png" class="close" onclick="toggleVideo();">
+        </div>
+        <script>
+            function toggleVideo() {
+                const trailer = document.querySelector('.trailer');
+                const video = document.querySelector('video');
+                trailer.classList.toggle('active');
+                video.currentTime = 0;
+                video.pause();
+            }
+        </script>
+    </body>
+</html>
